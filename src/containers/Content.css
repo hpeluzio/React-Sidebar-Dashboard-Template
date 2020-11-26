@@ -1,0 +1,16 @@
+/* CONTENT */
+.content {
+    grid-area: content;
+    position: fixed;
+    right: 0;
+    top: 8vh;
+    left: 18vw;
+    overflow-y: auto;
+    height: 89vh;
+    /* max-width: 900px; */
+    /* margin: 0 auto; */
+    /* padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem; */
+}
