@@ -8,15 +8,16 @@ import './Main.css'
 
 import Header from './Header'
 import Content from './Content'
-import Sidenav from './Sidenav'
+import Sidebar from './Sidebar'
 
 const Main = () => {
     return (
         <Router>
             <div className="main-grid">
+                <input type="checkbox" id="check"></input>
                 <Header></Header>
 
-                <Sidenav></Sidenav>
+                <Sidebar></Sidebar>
 
                 <Content></Content>
             </div>

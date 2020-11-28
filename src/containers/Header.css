@@ -1,76 +1,71 @@
 /* HEADER */
-.header {
-    grid-area: header;
-    width: 100%;
-    height: minmax(var(--header-height), var(--header-height));
-    background: #fff;
-    border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    align-content: center;
-    /* GET FIXED ON BOTTOM */
+header {
     position: fixed;
-    top: 0;
-    box-sizing: border-box;
-}
-
-.logo-header {
-    display: flex;
-    /* color: #2f414d; */
-    width: 10vw;
-    font-weight: bold;
-    font-size: 2.2rem;
-    justify-content: center;
-}
-
-#logo-icon {
-    display: flex;
-    color: #2f414d;
-    padding-right: 1rem;
-}
-
-#logo-icon div {
-    padding-left: 1rem;
-}
-
-.header nav ul {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.header nav ul li div {
-    padding-left: 0.5rem;
-}
-
-.header nav a {
-    /* padding: 0rem; */
-    color: rgba(0, 0, 0, 0.4);
-    /* font-size: 1.8rem; */
-    /* background: rgba(0, 0, 0, 0.1); */
-    /* border-radius: 0.5rem; */
-    transition: 0.25s;
-}
-
-.header nav a:hover {
-    color: rgba(0, 0, 0, 1);
-}
-
-/* .header li + li {
-    margin-left: 1rem;
-} */
-
-.header-link {
+    width: 100%;
+    height: var(--header-height);
+    background: #22242a;
+    /* padding: 20px; */
     display: flex;
     align-items: center;
-    padding: 1.6rem;
-    transition: 0.25s;
-    /* padding-bottom: 50%; */
-    /* background-color: tomato; */
+    justify-content: space-between;
 }
 
-.header-link:hover {
-    background: #c7e6fd;
-    transition: 0.25s;
-    border-radius: 5rem;
+label #checked_sidebar {
+    /* z-index: 1; */
+    color: #fff;
+    /* position: fixed; */
+    cursor: pointer;
+    /* left: 300px; */
+    font-size: 20px;
+    /* margin: 5px 0; */
+    transition: 0.5s;
+    transition-property: color;
+}
+
+label #checked_sidebar:hover {
+    color: #19b3d3;
+}
+
+.left_area {
+    display: flex;
+    align-items: center;
+    width: var(--sidebar-width);
+    justify-content: center;
+    /* justify-content: center; */
+    /* align-content: center; */
+    /* justify-content: space-between; */
+}
+
+.left_area h3 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.left_area span {
+    color: #19b3d3;
+}
+
+.logo_home {
+    padding-right: 2rem;
+}
+
+.right_area {
+    display: flex;
+    align-items: center;
+}
+
+.right_area .header-link {
+    padding: 2.5rem;
+    /* background: tomato; */
+    font-size: 1.6rem;
+    color: #fff;
+    transition-duration: 0.5s;
+    transition-property: all;
+}
+
+.right_area .header-link:hover {
+    font-weight: bold;
+    background: #19b3d3;
 }

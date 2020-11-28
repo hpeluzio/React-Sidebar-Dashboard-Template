@@ -1,17 +1,14 @@
 /* CONTENT */
+
 .content {
-    grid-area: content;
     position: fixed;
+    /* margin-left: 250px; */
+    top: var(--header-height);
+    left: var(--sidebar-width);
     right: 0;
-    top: calc(var(--header-height));
-    left: calc(var(--sidebar-width));
-    overflow-y: auto;
-    /* height: 93vh; */
-    /* padding: 1rem; */
-    /* max-width: 900px; */
-    /* margin: 0 auto; */
-    /* padding: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem; */
+    /* background: url(background.png) no-repeat; */
+    /* background-position: center; */
+    /* background-size: cover; */
+    height: 100vh;
+    transition: 0.5s;
 }

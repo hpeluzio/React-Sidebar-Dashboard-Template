@@ -6,10 +6,9 @@
 }
 
 :root {
-    --header-height: 55px;
-    --sidebar-width: 250px;
+    --header-height: 70px;
+    --sidebar-width: 220px;
     --sidebar-height: 100%;
-    /* --content-width: calc(100vh - var(--sidebar-width)); */
 }
 
 html {
@@ -30,54 +29,46 @@ a {
     text-decoration: none;
 }
 
-/* img {
-    display: block;
-    max-width: 100%;
-    border-radius: 1rem;
-} */
-
-/* GRID GERAL */
-.main-grid {
-    display: grid;
-    /* grid-template-columns: minmax(160px, 1fr) 3fr 300px; */
-    grid-template:
-        'header header header'
-        'sidenav content content'
-        /* 'footer footer footer' */
-        / minmax(160px, 1fr) 3fr 30rem;
+#check:checked ~ .sidebar {
+    /* display: flex;
+    flex-direction: column; */
+    /* align-items: center; */
+    /* background: #2f323a;
+    position: fixed;
+    top: 70px;
+    padding: 2rem; */
+    /* padding-top: 30px; */
+    /* left: 0; */
+    width: 60px;
+    /* height: 100%; */
+    transition-duration: 0.5s;
+    transition-property: width;
 }
 
-/* ANUNCIOS */
-.anuncios {
-    grid-area: anuncios;
-    background: #fafbfc;
-    display: grid;
-    align-content: start;
-    padding: 2rem;
-    grid-gap: 2rem;
-    /* grid-template-rows: 270px; */
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+#check:checked ~ .sidebar a {
+    /* font-size: 25px; */
+    /* align-items: center; */
+    /* margin-left: 170px; */
+    /* width: 80px; */
+
+    /* line-height: 50rem; */
+    /* width: 50px; */
+    /* transition: 0.5s; */
+    /* transition-property: background; */
 }
 
-/* FOOTER */
-/* .footer {
-    grid-area: footer;
-    height: 3vh;
-    background: linear-gradient(135deg, #8844ee, #b07dfb);
-    padding: 0.5rem;
-    position: sticky;
-    bottom: 0;
-    width: 100%; 
-    left: 0;
-    bottom: 0;
-    right: 0; 
+#check:checked ~ .sidebar a span {
+    display: none;
 }
 
-.footer p {
-    color: white;
-    font-weight: bolder;
-    text-align: center;
-} */
+#check:checked ~ .content {
+    /* margin-left: 60px; */
+    left: 60px;
+}
+
+#check {
+    display: none;
+}
 
 /* CUSTOM SCROLL */
 ::-webkit-scrollbar {

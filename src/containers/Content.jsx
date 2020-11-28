@@ -13,7 +13,6 @@ import CountProvider from '../components/Count/CountContext'
 import Sessoes from '../components/Sessoes/Sessoes'
 import SessoesProvider from '../components/Sessoes/SessoesContext'
 import ApiProvider from '../components/Sessoes/ApiContext'
-import 'fontsource-roboto'
 import './Content.css'
 
 const Content = () => {
@@ -21,6 +20,11 @@ const Content = () => {
         <main className="content">
             <Switch>
                 <Route path="/" exact>
+                    <ApiProvider>
+                        <Home></Home>
+                    </ApiProvider>
+                </Route>
+                <Route path="/sessoes">
                     <ApiProvider>
                         <SessoesProvider>
                             <Sessoes></Sessoes>
@@ -35,11 +39,6 @@ const Content = () => {
                 <Route path="/register">
                     <ApiProvider>
                         <Register></Register>
-                    </ApiProvider>
-                </Route>
-                <Route path="/home">
-                    <ApiProvider>
-                        <Home></Home>
                     </ApiProvider>
                 </Route>
                 <Route path="/count">
