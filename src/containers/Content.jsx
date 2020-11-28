@@ -18,43 +18,45 @@ import './Content.css'
 const Content = () => {
     return (
         <main className="content">
-            <Switch>
-                <Route path="/" exact>
-                    <ApiProvider>
-                        <Home></Home>
-                    </ApiProvider>
-                </Route>
-                <Route path="/sessoes">
-                    <ApiProvider>
-                        <SessoesProvider>
-                            <Sessoes></Sessoes>
-                        </SessoesProvider>
-                    </ApiProvider>
-                </Route>
-                <Route path="/login">
-                    <ApiProvider>
-                        <Login></Login>
-                    </ApiProvider>
-                </Route>
-                <Route path="/register">
-                    <ApiProvider>
-                        <Register></Register>
-                    </ApiProvider>
-                </Route>
-                <Route path="/count">
-                    <CountProvider>
+            <div className="content_container">
+                <Switch>
+                    <Route path="/" exact>
+                        <ApiProvider>
+                            <Home></Home>
+                        </ApiProvider>
+                    </Route>
+                    <Route path="/sessoes">
+                        <ApiProvider>
+                            <SessoesProvider>
+                                <Sessoes></Sessoes>
+                            </SessoesProvider>
+                        </ApiProvider>
+                    </Route>
+                    <Route path="/login">
+                        <ApiProvider>
+                            <Login></Login>
+                        </ApiProvider>
+                    </Route>
+                    <Route path="/register">
+                        <ApiProvider>
+                            <Register></Register>
+                        </ApiProvider>
+                    </Route>
+                    <Route path="/count">
+                        <CountProvider>
+                            <TodoProvider>
+                                <Count></Count>
+                            </TodoProvider>
+                        </CountProvider>
+                    </Route>
+                    <Route path="/todoList">
                         <TodoProvider>
-                            <Count></Count>
+                            <TodoList></TodoList>
+                            <AddTodo></AddTodo>
                         </TodoProvider>
-                    </CountProvider>
-                </Route>
-                <Route path="/todoList">
-                    <TodoProvider>
-                        <TodoList></TodoList>
-                        <AddTodo></AddTodo>
-                    </TodoProvider>
-                </Route>
-            </Switch>
+                    </Route>
+                </Switch>
+            </div>
         </main>
     )
 }

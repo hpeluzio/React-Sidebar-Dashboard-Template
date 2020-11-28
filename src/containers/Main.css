@@ -30,40 +30,21 @@ a {
 }
 
 #check:checked ~ .sidebar {
-    /* display: flex;
-    flex-direction: column; */
-    /* align-items: center; */
-    /* background: #2f323a;
-    position: fixed;
-    top: 70px;
-    padding: 2rem; */
-    /* padding-top: 30px; */
-    /* left: 0; */
-    width: 60px;
-    /* height: 100%; */
-    transition-duration: 0.5s;
-    transition-property: width;
-}
-
-#check:checked ~ .sidebar a {
-    /* font-size: 25px; */
-    /* align-items: center; */
-    /* margin-left: 170px; */
-    /* width: 80px; */
-
-    /* line-height: 50rem; */
-    /* width: 50px; */
-    /* transition: 0.5s; */
-    /* transition-property: background; */
+    left: -150px;
 }
 
 #check:checked ~ .sidebar a span {
     display: none;
 }
 
+#check:checked ~ .sidebar a {
+    font-size: 20px;
+    margin-left: 155px;
+    /* width: 80px; */
+}
+
 #check:checked ~ .content {
-    /* margin-left: 60px; */
-    left: 60px;
+    margin-left: -150px;
 }
 
 #check {

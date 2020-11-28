@@ -9,7 +9,8 @@
     flex-direction: column;
     /* align-items: center; */
     transition: 0.5s;
-    transition-property: width;
+    transition-property: all;
+    overflow-y: auto;
 }
 
 .sidebar .profile_image {

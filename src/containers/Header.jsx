@@ -8,7 +8,7 @@ const Header = () => {
     return (
         <header>
             <div className="left_area">
-                <Link to="/home" className="logo_home">
+                <Link to="/" className="logo_home">
                     <h3>
                         Template <span>Logo</span>
                     </h3>
