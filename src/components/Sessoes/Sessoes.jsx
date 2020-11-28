@@ -22,9 +22,7 @@ function Sessoes(props) {
 
     return (
         <div>
-            <hr />
-            <br />
-            <br />
+            {/* <br /> */}
             <div>apiData: {apiData.base_url} </div>
             {sessoes.map((sessao) => {
                 return (

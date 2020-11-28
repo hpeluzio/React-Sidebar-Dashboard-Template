@@ -2,42 +2,31 @@ import React from 'react'
 
 import { Link } from 'react-router-dom'
 import './Sidenav.css'
+import PersonOutlineIcon from '@material-ui/icons/PersonOutline'
+import PlusOneIcon from '@material-ui/icons/PlusOne'
+import FormatListNumberedIcon from '@material-ui/icons/FormatListNumbered'
 
 const Sidenav = () => {
     return (
         <nav className="sidenav">
+            {/* <div className="sidenav-header">TODO ALL FEATURES</div> */}
             <li>
-                <a href="#">Side1</a>
+                <Link to="/todolist" className="sidenav-link">
+                    <FormatListNumberedIcon fontSize="large"></FormatListNumberedIcon>
+                    <div>TodoList</div>
+                </Link>
             </li>
             <li>
-                <a href="#">Side2</a>
+                <Link to="/count" className="sidenav-link">
+                    <PlusOneIcon fontSize="large"></PlusOneIcon>
+                    <div>Count</div>
+                </Link>
             </li>
             <li>
-                <a href="#">Side3</a>
-            </li>
-            <li>
-                <a href="#">Side3</a>
-            </li>
-            <li>
-                <a href="#">Side3</a>
-            </li>
-            <li>
-                <a href="#">Side3</a>
-            </li>
-            <li>
-                <a href="#">Side3</a>
-            </li>
-            <li>
-                <a href="#">Side3</a>
-            </li>
-            <li>
-                <a href="#">Side312312312313</a>
-            </li>
-            <li>
-                <a href="#">Side44222222</a>
-            </li>
-            <li>
-                <a href="#">Side11</a>
+                <Link to="/" className="sidenav-link">
+                    <PersonOutlineIcon fontSize="large"></PersonOutlineIcon>
+                    <div>Sessões</div>
+                </Link>
             </li>
         </nav>
     )

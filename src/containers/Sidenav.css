@@ -1,30 +1,45 @@
 /* SIDENAV */
 .sidenav {
     grid-area: sidenav;
-    height: 92vh;
-    width: 15vw;
-    overflow: auto;
     position: fixed;
-    top: 8vh;
+    top: var(--header-height);
     left: 0;
-    /* background: #fafbfc; */
+    height: var(--sidebar-height);
+    /* width: minmax(var(--sidebar-width), var(--sidebar-width)); */
+    width: var(--sidebar-width);
+    overflow: auto;
     background: #2f414d;
-    padding: 0.25rem;
-    /* min-height: 65vh; */
 }
 
 .sidenav li a {
-    display: block;
     max-width: 100%;
     margin: 0 auto 1rem auto;
     background: #2f414d;
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     /* border-radius: 0.5rem; */
-    box-shadow: 0.5rem 0.5rem 1.5rem 0rem rgba(44, 44, 44, 0.15);
+    /* box-shadow: 0.5rem 0.5rem 1.5rem 0rem rgba(44, 44, 44, 0.15); */
     color: white;
+    font-size: 1.4rem;
+    padding-left: 1.6rem;
 }
 
 .sidenav li a:hover {
     background: #87cefa;
     transition: 0.5s;
+}
+
+.sidenav-header {
+    font-weight: bold;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+
+.sidenav-link {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    /* background-color: tomato; */
 }

@@ -2,6 +2,9 @@ import React from 'react'
 
 import { Switch, Route } from 'react-router-dom'
 
+import Login from '../components/Login/Login'
+import Register from '../components/Register/Register'
+import Home from '../components/Home/Home'
 import TodoProvider from '../components/Todo/TodoContext'
 import TodoList from '../components/Todo/TodoList'
 import AddTodo from '../components/Todo/AddTodo'
@@ -17,6 +20,28 @@ const Content = () => {
     return (
         <main className="content">
             <Switch>
+                <Route path="/" exact>
+                    <ApiProvider>
+                        <SessoesProvider>
+                            <Sessoes></Sessoes>
+                        </SessoesProvider>
+                    </ApiProvider>
+                </Route>
+                <Route path="/login">
+                    <ApiProvider>
+                        <Login></Login>
+                    </ApiProvider>
+                </Route>
+                <Route path="/register">
+                    <ApiProvider>
+                        <Register></Register>
+                    </ApiProvider>
+                </Route>
+                <Route path="/home">
+                    <ApiProvider>
+                        <Home></Home>
+                    </ApiProvider>
+                </Route>
                 <Route path="/count">
                     <CountProvider>
                         <TodoProvider>
@@ -24,18 +49,11 @@ const Content = () => {
                         </TodoProvider>
                     </CountProvider>
                 </Route>
-                <Route path="/TodoList">
+                <Route path="/todoList">
                     <TodoProvider>
                         <TodoList></TodoList>
                         <AddTodo></AddTodo>
                     </TodoProvider>
-                </Route>
-                <Route path="/">
-                    <ApiProvider>
-                        <SessoesProvider>
-                            <Sessoes></Sessoes>
-                        </SessoesProvider>
-                    </ApiProvider>
                 </Route>
             </Switch>
         </main>

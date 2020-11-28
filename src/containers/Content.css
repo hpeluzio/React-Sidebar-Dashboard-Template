@@ -3,10 +3,11 @@
     grid-area: content;
     position: fixed;
     right: 0;
-    top: 8vh;
-    left: 18vw;
+    top: calc(var(--header-height));
+    left: calc(var(--sidebar-width));
     overflow-y: auto;
-    height: 89vh;
+    /* height: 93vh; */
+    /* padding: 1rem; */
     /* max-width: 900px; */
     /* margin: 0 auto; */
     /* padding: 2rem;

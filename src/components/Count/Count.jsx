@@ -7,7 +7,6 @@ function Count() {
     // return <div>oi</div>
     return (
         <div>
-            <hr />
             <br />
             <b>
                 <span>Count: </span>

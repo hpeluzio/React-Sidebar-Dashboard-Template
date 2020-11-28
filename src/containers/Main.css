@@ -5,6 +5,13 @@
     outline: 0;
 }
 
+:root {
+    --header-height: 55px;
+    --sidebar-width: 250px;
+    --sidebar-height: 100%;
+    /* --content-width: calc(100vh - var(--sidebar-width)); */
+}
+
 html {
     font-size: 62.5%;
 }
@@ -23,11 +30,11 @@ a {
     text-decoration: none;
 }
 
-img {
+/* img {
     display: block;
     max-width: 100%;
     border-radius: 1rem;
-}
+} */
 
 /* GRID GERAL */
 .main-grid {
